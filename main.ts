@@ -1,3 +1,23 @@
+controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+    Very_strong_cat_hammer.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . c . . . . . . . . c . . . 
+        . . c c c . . . . . . c c c . . 
+        . c c c c c . . . . c c c c c . 
+        . c c c c c c c c c c c c c c . 
+        . c c f f c c c c c c f f c c . 
+        . c c f f c c 3 3 c c f f c c . 
+        . c c c c c c c c c c c c c c . 
+        . c c c c c c c c c c c c c c . 
+        . c c c c c c c c c c c c c c . 
+        . c c c c c c c c c c c c c c . 
+        . . . . . . c c c c . . . . . . 
+        . . . . . . c c c c . . . . . . 
+        . . . . . . c c c c . . . . . . 
+        . . . . . . c c c c . . . . . . 
+        . . . . . . c c c c . . . . . . 
+        `)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     Very_strong_cat_hammer.setImage(img`
         ....................
@@ -20,26 +40,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         ....................
         ....................
         ....................
-        `)
-})
-controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
-    Very_strong_cat_hammer.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . c . . . . . . . . c . . . 
-        . . c c c . . . . . . c c c . . 
-        . c c c c c . . . . c c c c c . 
-        . c c c c c c c c c c c c c c . 
-        . c c f f c c c c c c f f c c . 
-        . c c f f c c 3 3 c c f f c c . 
-        . c c c c c c c c c c c c c c . 
-        . c c c c c c c c c c c c c c . 
-        . c c c c c c c c c c c c c c . 
-        . c c c c c c c c c c c c c c . 
-        . . . . . . c c c c . . . . . . 
-        . . . . . . c c c c . . . . . . 
-        . . . . . . c c c c . . . . . . 
-        . . . . . . c c c c . . . . . . 
-        . . . . . . c c c c . . . . . . 
         `)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -105,4 +105,5 @@ game.onUpdateInterval(randint(200, 2000), function () {
     } else if (Random == 4) {
         Very_angry_cheese.setPosition(138, 93)
     }
+    Very_angry_cheese.lifespan = 1900
 })
